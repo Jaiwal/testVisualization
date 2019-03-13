@@ -1,0 +1,231 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+
+function window_onload() {
+document.form1.submit1.disabled=true;
+	document.form1.first.focus();
+}
+
+function last_onfocus() {
+if(document.form1.first.value=="")	{
+		alert("first name should not empty");
+		document.form1.first.focus();
+		return false;
+	}
+	else
+	if(!isNaN(document.form1.first.value)==true){
+			alert("first name should be alphabets");
+			document.form1.first.value="";
+			document.form1.first.focus();
+			return false;
+	}
+
+}
+
+function email_onfocus() {
+if(document.form1.last.value=="")	{
+		alert("Password should not empty");
+		document.form1.last.focus();
+		return false;
+	}
+	else
+	if(!isNaN(document.form1.last.value)==true){
+		alert("Password must start with alphabets");
+		document.form1.last.value="";
+		document.form1.last.focus();
+		return false;
+	}
+
+}
+
+function contact_onfocus() {
+if(document.form1.email.value==""){
+		alert("email is compulsory");
+		document.form1.email.focus();
+		return false;
+	}
+	else
+	em=document.form1.email.value;
+	if(em.indexOf("@")<0 ||em.indexOf(".")<0){
+		alert("email is wrong");
+		document.form1.email.value="";
+		document.form1.email.focus();
+		return false;
+	}
+}
+
+function qualif_onfocus() {
+if(document.form1.contact.value==""){
+		alert("contact number is compulsory");
+		document.form1.contact.focus();
+		return false;
+	}
+	else if(!isNaN(document.form1.contact.value)==false){
+		alert("contact number in numeric");
+		document.form1.contact.value="";
+		document.form1.contact.focus();
+		return false;
+	}
+}
+
+function software_onfocus() {
+if(document.form1.qualif.value==""){
+		alert("Qualifications are compulsory");
+		document.form1.qualif.focus();
+		return false;
+	}
+	else if(!isNaN(document.form1.qualif.value)==true){
+		document.form1.qualif.value="";
+		document.form1.qualif.focus();
+		return false;
+	}
+}
+
+function exper_onfocus() {
+if(document.form1.software.value==""){
+		alert("software skills are compulsory");
+		document.form1.software.focus();
+		return false;
+	}
+	else if(!isNaN(document.form1.software.value)==true){
+		document.form1.software.value="";
+		document.form1.software.focus();
+		return false;
+	}
+}
+
+function address_onfocus() {
+if(document.form1.exper.value==""){
+		alert("experience is compulsory");
+		document.form1.exper.focus();
+		return false;
+	}
+	else{
+	document.form1.submit1.disabled=false;
+	}
+
+}
+
+//-->
+</SCRIPT>
+</head>
+
+<body bgcolor="#AAAAAA" LANGUAGE=javascript onload="return window_onload()">
+<form method="post" action="register.jsp" id=form1 name=form1 >
+  <table width="95%" border="1" cellpadding="0" cellspacing="0" bordercolor="#66CC99" align="center">
+    <tr>
+      <td>
+        <div align="center"><b><font size="3" face="Verdana, Arial, Helvetica, sans-serif">Registration
+          Form</font></b></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table width="90%" cellpadding="0" cellspacing="0" align="center" border="0">
+          <tr>
+            <td colspan="4">&nbsp;</td>
+          </tr>
+          <tr>
+            <td colspan="4"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b><font color="#FF3333">*</font>
+              Fields are compulsory</b></font></td>
+          </tr>
+          <tr>
+            <td width="19%">&nbsp;</td>
+            <td width="28%">&nbsp;</td>
+            <td width="22%">&nbsp;</td>
+            <td width="31%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="19%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FF3333">*</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              UserName</font></td>
+            <td width="28%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input id=first type="text" name=fname>
+              </font></td>
+            <td width="22%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FF3333">*</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              Password</font></td>
+            <td width="31%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input id=last name=pass type="password"  LANGUAGE=javascript onfocus="return last_onfocus()">
+              </font></td>
+          </tr>
+          <tr>
+            <td width="19%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FF3333">*</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              E-mail ID</font></td>
+            <td width="28%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input id=email name=eid type="text"  LANGUAGE=javascript onfocus="return email_onfocus()">
+              </font></td>
+            <td width="22%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FF3333">*</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              Contact No.</font></td>
+            <td width="31%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input id=contact name=conno type="text"  LANGUAGE=javascript onfocus="return contact_onfocus()">
+              </font></td>
+          </tr>
+          <tr>
+            <td width="19%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FF3333">*</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              Gender</font></td>
+            <td width="28%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input id=radio1 name=gender type="radio"  value="Male" checked>
+              Male&nbsp;&nbsp;&nbsp;&nbsp;
+              <input id=radio1 name=gender type="radio"  value="Female">
+              Female </font></td>
+            <td width="22%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FF3333">*</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              Qualifications</font></td>
+            <td width="31%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input id=qualif name=qua type="text" LANGUAGE=javascript onfocus="return qualif_onfocus()">
+              </font></td>
+          </tr>
+          <tr>
+            <td width="19%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FF3333">*</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              Skillsets</font></td>
+            <td width="28%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <textarea id=software name=software wrap="VIRTUAL" LANGUAGE=javascript onfocus="return software_onfocus()"></textarea>
+              </font></td>
+            <td width="22%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font></td>
+            <td width="31%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font></td>
+          </tr>
+          <tr>
+            <td width="19%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#FF3333">*</font><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              Experience</font></td>
+            <td width="28%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input id=exper name=exp  type="text"  LANGUAGE=javascript onfocus="return exper_onfocus()">
+              </font></td>
+            <td width="22%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Present
+              Address</font></td>
+            <td width="31%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input id=address name=address type="text"  LANGUAGE=javascript onfocus="return address_onfocus()">
+              </font></td>
+          </tr>
+          <tr>
+            <td width="19%">&nbsp;</td>
+            <td width="28%">&nbsp;</td>
+            <td width="22%">&nbsp;</td>
+            <td width="31%">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="19%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font></td>
+            <td width="28%">
+              <div align="right"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                <input id=submit1 name=submit1 type="submit" value="Submit">
+                </font></div>
+            </td>
+            <td width="22%"> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+              <input id=reset1 name=reset1 type="reset" value="Reset">
+              </font></td>
+            <td width="31%"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"></font></td>
+          </tr>
+          <tr>
+            <td width="19%">&nbsp;</td>
+            <td width="28%">&nbsp;</td>
+            <td width="22%">&nbsp;</td>
+            <td width="31%">&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
